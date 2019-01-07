@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+<!-- SMTP settings -->
+	<context-param>
+		<param-name>host</param-name>
+		<param-value>mrinversatilecom.domain.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>port</param-name>
+		<param-value>587</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>mkundu@mrinmay.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>Hurricane2011!</param-value>
+	</context-param>
+ 	
+  	<welcome-file-list>
+  	<welcome-file>iamM.jsp</welcome-file>
+	</welcome-file-list>
+  	
+  <servlet>
+    <servlet-name>index</servlet-name>
+    <jsp-file>/iamM.jsp</jsp-file>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>index</servlet-name>
+    <url-pattern>/iamM.jsp</url-pattern>
+</servlet-mapping>
+   
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.png</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.mp4</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.jpg</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.gif</url-pattern>
+</servlet-mapping>
+	<servlet>
+		<servlet-name>viewpost</servlet-name>
+		<servlet-class>com.blog.servlets.ViewPostServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>createpost</servlet-name>
+		<servlet-class>com.blog.servlets.CreatePostServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>createcomment</servlet-name>
+		<servlet-class>com.blog.servlets.CreateCommentServlet</servlet-class>
+	</servlet>
+	
+		<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.amzi.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>register</servlet-name>
+		<servlet-class>com.amzi.servlets.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>delete</servlet-name>
+		<servlet-class>com.amzi.servlets.DeleteServlet</servlet-class>
+	</servlet>
+  <servlet>  
+    <servlet-name>logout</servlet-name>  
+    <servlet-class>com.amzi.servlets.LogoutServlet</servlet-class>  
+  </servlet>
+	<servlet>
+    <servlet-name>EmailSendingServlet</servlet-name>
+    <servlet-class>com.net.codejava.email.EmailSendingServlet</servlet-class>
+	</servlet>
+	<servlet>
+    <servlet-name>passwordrecover</servlet-name>
+    <servlet-class>com.amzi.servlets.PasswordServlet</servlet-class>
+	</servlet>
+	<servlet>
+    <servlet-name>passwordchange</servlet-name>
+    <servlet-class>com.amzi.servlets.PasswordChangeServlet</servlet-class>
+	</servlet>
+		<servlet>
+    <servlet-name>updatepost</servlet-name>
+    <servlet-class>com.blog.servlets.SavePostServlet</servlet-class>
+	</servlet>
+	<servlet>
+    <servlet-name>deletepost</servlet-name>
+    <servlet-class>com.blog.servlets.DeletePostServlet</servlet-class>
+	</servlet>
+	<servlet>
+    <servlet-name>search</servlet-name>
+    <servlet-class>com.blog.servlets.BlogSearchEngineServlet</servlet-class>
+	</servlet>
+		<servlet>
+    <servlet-name>like</servlet-name>
+    <servlet-class>com.blog.servlets.PostLikeServlet</servlet-class>
+	</servlet>
+		<servlet>
+    <servlet-name>dislike</servlet-name>
+    <servlet-class>com.blog.servlets.PostDislikeServlet</servlet-class>
+	</servlet>
+	
+	
+			<servlet-mapping>
+		<servlet-name>dislike</servlet-name>
+		<url-pattern>/PostDislikeServlet</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>like</servlet-name>
+		<url-pattern>/PostLikeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>search</servlet-name>
+		<url-pattern>/BlogSearchEngineServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>deletepost</servlet-name>
+		<url-pattern>/DeletePostServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updatepost</servlet-name>
+		<url-pattern>/SavePostServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>passwordchange</servlet-name>
+		<url-pattern>/PasswordChangeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>passwordrecover</servlet-name>
+		<url-pattern>/PasswordServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+        <servlet-name>EmailSendingServlet</servlet-name>
+        <url-pattern>/EmailSendingServlet</url-pattern>
+    </servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>viewpost</servlet-name>
+		<url-pattern>/ViewPostServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>createpost</servlet-name>
+		<url-pattern>/CreatePostServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>createcomment</servlet-name>
+		<url-pattern>/CreateCommentServlet</url-pattern>
+	</servlet-mapping>
+
+	
+		<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/loginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/registerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>delete</servlet-name>
+		<url-pattern>/deleteServlet</url-pattern>
+	</servlet-mapping>
+	  <servlet-mapping>  
+    <servlet-name>logout</servlet-name>  
+    <url-pattern>/logoutServlet</url-pattern>  
+  </servlet-mapping>  
+  
+  <error-page>
+    <!-- Missing login -->
+    <error-code>401</error-code>
+    <location>/general-error.jsp</location>
+</error-page>
+<error-page>
+    <!-- Forbidden directory listing -->
+    <error-code>403</error-code>
+    <location>/general-error.jsp</location>
+</error-page>
+<error-page>
+    <!-- Missing resource -->
+    <error-code>404</error-code>
+    <location>/general-error.jsp</location>
+</error-page>
+<error-page>
+    <!-- Uncaught exception -->
+    <error-code>500</error-code>
+    <location>/general-error.jsp</location>
+</error-page>
+<error-page>
+    <!-- Unsupported servlet method -->
+    <error-code>503</error-code>
+    <location>/general-error.jsp</location>
+</error-page>
+<error-page>
+    <!-- Unsupported servlet method -->
+    <error-code>405</error-code>
+    <location>/general-error.jsp</location>
+</error-page>
+</web-app>

@@ -1,0 +1,67 @@
+#postimg {
+	max-width: 100%;
+	width: 3600px;
+}
+
+#title1 {
+	font: 400 80px/.9 'Lobster Two', Helvetica, sans-serif;
+	color: #ff9933;
+	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+input[type=submit] {
+	padding: 5px 15px;
+	background: #0000ff;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: white;
+}
+
+#submit, #submit2, #likecount, #dislikecount {
+	float: left;
+	text-align: right;
+}
+
+#myPost {
+	border: solid 1px #ccc;
+	padding: 10px;
+	margin: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#submit-data, #myButton {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+#myPost {
+	color: #000000;
+	font-family: Comic Sans, Comic Sans MS, cursive;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: 0 0 24px;
+	background-color:#ffffce;
+	white-space: pre-line;
+}
+
+#myPost a {
+	color: #8000ff;
+	text-decoration: underline;
+}
+
+#myPost a:hover {
+	color: #ff0000;
+	text-decoration: underline;
+}

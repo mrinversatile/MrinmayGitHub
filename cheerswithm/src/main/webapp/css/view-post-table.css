@@ -1,0 +1,63 @@
+
+table, tbody tr, th, td {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+table{ 
+  
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #585858;
+  padding: 16px 10px;
+  padding-bottom: 55px;
+}
+
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+#blog {
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: cursive;
+
+
+}
+#blog tbody tr{
+    background-color: #ebf8a0;
+    border-top: 1px solid #fff;
+}
+#blog  tbody tr:hover {
+    background-color: #ffff00;
+}
+
+#blog thead {
+  background: #35bdff;
+}
+#blog thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#blog thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+
+#blog tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#blog tbody tr td.lalign {
+  text-align: left;
+}
+td{
+	word-wrap:break-word;
+	width:100px;
+}
+
